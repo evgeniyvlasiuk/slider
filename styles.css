@@ -31,9 +31,11 @@ height:280px;
 	background-color: white;
 	background-size:cover;
   float: left;
-}
 
-.about{
+} 
+
+.about {
+
   width: 300px;
   height: 40px;
   background: rgba(255, 255, 255, 0.3);
@@ -43,6 +45,14 @@ height:280px;
   line-height: 40px;
   color: #FFFFFF;
   font-size: 10px;
+}
+
+#sc5{
+
+	height: 60px;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 0px;
+	line-height: 15px
 }
 
 #pol{

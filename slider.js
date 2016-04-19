@@ -12,6 +12,15 @@ init: function() {
 bordnone: function(){
     $('.minsc').css('border', "none");
 },
+
+about: function(){
+	var l = 1+ this.frame;
+	var e = (parseInt($('#pol1').css("height")) - parseInt($("#sc" + l).css('height')))-50;
+    $(".about").css('marginTop', "-50px");
+    $('.about').animate({marginTop: e + "px" }, 1000);
+
+},
+
 left: function() { 
 	var ws = (parseInt($('#mini').css('width')) - parseInt($('#pol').css('width')))/8;
 	var wb = parseInt($('#big').css('width'))-parseInt($('#pol1').css('width'));
@@ -21,14 +30,18 @@ left: function() {
         this.frame = this.slides.length-1;
 		$('#mini').animate({marginLeft: "-" + ws1});
 		$('#big').animate({marginLeft: "-" + wb});
+		
 	}
 	else{
 		$('#mini').animate({marginLeft: "+=" + ws});
         $('#big').animate({marginLeft: "+=" + parseInt($('#pol1').css('width'))});
-	}
+     	}
+    slider.about();
 	slider.bord()
 },
+
 right: function() { 
+    
 	this.frame++;
 	var ws = (parseInt($('#mini').css('width')) - parseInt($('#pol').css('width')))/8;
     console.log(ws); 
@@ -40,9 +53,12 @@ right: function() {
     else{
         $('#mini').animate({marginLeft: "-=" + ws});
 	    $('#big').animate({marginLeft: "-=" + parseInt($('#pol1').css('width'))});
+	   
     }
+    slider.about();
 	slider.bord();
 },
+
 bord: function(){
 	this.bordnone();
 	var t = 1+this.frame;
@@ -51,7 +67,7 @@ bord: function(){
 start: function() {
 	var go = setInterval(function() { 
 	slider.right();
-	},2000);
+	},3000);
     $("#stop").on('click', function(){
     i=1;
     clearInterval(go);
@@ -61,11 +77,13 @@ start: function() {
 /*-------------------------------------------READY-------------------------------------------------*/
 $(document).ready(function() {
    slider.init();
+      slider.about();
    slider.bord();
    slider.start();
+
    var lr = setInterval(function() { 
       q=1;
-	},1000);
+	},2000);
 
 $("#play").on('click', function(){
 	if (i==1) {

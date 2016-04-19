@@ -1,0 +1,206 @@
+body{
+   background: url('fon.jpg');
+}
+
+#main{
+  width: 680px;
+  height: 360px;
+  padding-top: 30px;
+  position: relative;
+  overflow: hidden;
+  margin:auto;
+}
+
+#pol1{
+  margin: auto;
+  width: 620px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow:  0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+#big {
+width: 4960px;
+height:280px;
+}
+
+.sc {
+	width: 600px;
+	height: 280px;
+	border: 10px solid #3A3A3A;
+	background-color: white;
+	background-size:cover;
+  float: left;
+}
+
+.about{
+  width: 300px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-left: 280px;
+  margin-top: 220px;
+  text-align: center;
+  line-height: 40px;
+  color: #FFFFFF;
+  font-size: 10px;
+}
+
+#pol{
+  margin: auto;
+  width: 600px;
+  height: 140px;
+  overflow: hidden;
+  padding: 0;
+
+}
+
+#mini {
+width: 1054px;
+height:100px;
+}
+
+.minsc {
+
+	width: 120px;
+	height: 100px;
+	background-color: white;
+	background-size:cover;
+  float: left;
+  margin-left: 2px;
+}
+
+.minsc:hover{
+  cursor: pointer;
+}
+
+#play{
+   position: fixed;
+   text-align: center;
+   line-height: 20px;
+   color: rgba(0,0,0, 0.5);
+   font-family: sans-serif;
+   height: 20px;
+   width: 50px;
+   background: rgba(255, 255, 255, 0.3);
+   margin: auto;
+   float: left;
+}
+
+#play:hover{
+   background: rgba(255, 255, 255, 0.7);
+   cursor: pointer;
+}
+
+#stop{
+   position: fixed;
+   text-align: center;
+   line-height: 20px;
+   color: rgba(0,0,0, 0.5);
+   font-family: sans-serif;
+   height: 20px;
+   width: 50px;
+   background: rgba(255, 255, 255, 0.3);
+   margin-left: 50px;
+   float: left;
+}
+
+#stop:hover{
+   background: rgba(255, 255, 255, 0.7);
+   cursor: pointer;
+}
+
+button {
+   background: #191919;
+   position: absolute;
+   top: 105px;
+   width: 25px;
+   height: 150px;
+   font: 12pt arial,tahoma,sans-serif;
+   text-align: center;
+   border: none;
+   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);   
+}
+
+.left {
+  left:5px;
+}
+.right {
+  right:5px;
+}
+/*_____________________________________________atapt______________________________________________________________________-*/
+
+@media screen and (max-width: 767px){
+  
+  #main{
+   width: 350px;
+   height: 170px;
+   padding-top: 00px;
+   position: relative;
+   overflow: hidden;
+   margin:auto;
+  }
+
+  #pol1{
+   width: 310px;
+   height: 150px;
+   overflow: hidden;
+   box-shadow:  0 0 10px rgba(255, 255, 255, 0.7);
+  }
+
+  #big {
+   width: 2480px;
+   height:140px;
+  }
+
+  .sc {
+   width: 300px;
+   height: 140px;
+   border: 5px solid #FFFFFF;
+   background-color: white;
+   background-size:cover;
+   float: left;
+   }
+
+  button {
+   background: #191919;
+   position: absolute;
+   top: 50px;
+   width: 15px;
+   height: 50px;
+   font: 10pt arial,tahoma,sans-serif;
+   text-align: center;
+   border: none;
+   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);    
+  }
+
+  #pol{
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    overflow: hidden;
+
+  }
+
+    #mini {
+      width: 600px;
+      height:50px;  
+    }
+
+  .minsc {
+    box-shadow:  0 0 10px rgba(255, 255, 255, 0.7);
+    width: 60px;
+    height: 50px;
+    background-color: white;
+    background-size:cover;
+    float: left;
+    margin-left: 2px;
+  }
+
+  .minsc:hover{
+    cursor: pointer;
+  }
+}
+
+
+
+/*__________________________________________________________________________________________________________________________*/

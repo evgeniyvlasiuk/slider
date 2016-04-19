@@ -1,4 +1,5 @@
 var i = 1;
+var q = 1;
 var slider = {
 	slides:['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg'],
 	frame:0, 
@@ -62,11 +63,26 @@ $(document).ready(function() {
    slider.init();
    slider.bord();
    slider.start();
+   var lr = setInterval(function() { 
+      q=1;
+	},1000);
 
 $("#play").on('click', function(){
 	if (i==1) {
 	slider.start();
 	i+=1;
+	}
+});
+$(".left").on('click', function(){
+    if (q==1) {
+	slider.left();
+	q+=1;
+	}
+});
+$(".right").on('click', function(){
+    if (q==1) {
+	slider.right();
+	q+=1;
 	}
 });
 $(".minsc").on('click', function(){

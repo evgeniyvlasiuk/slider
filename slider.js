@@ -15,10 +15,18 @@ bordnone: function(){
 
 about: function(){
 	var l = 1+ this.frame;
-	var e = (parseInt($('#pol1').css("height")) - parseInt($("#sc" + l).css('height')))-50;
-    $(".about").css('marginTop', "-50px");
-    $('.about').animate({marginTop: e + "px" }, 1000);
-
+	var e = (parseInt($('.sc').css("height")) - parseInt($("#sc" + l).css('height')))-20;
+	console.log(e);
+	console.log(parseInt($("#sc" + l).css('height')));
+    $(".about").css('marginTop', "-" + parseInt($("#sc" + l).css('height'))-10);
+    function func() {
+   $('.about').animate({marginTop: e + "px" }, 1000);
+   }
+   setTimeout(func, 600);
+},
+bat: function(){
+$('#bat').animate({width: "0px"}, 0);
+$('#bat').animate({width: "600px"}, 3000);
 },
 
 left: function() { 
@@ -41,7 +49,6 @@ left: function() {
 },
 
 right: function() { 
-    
 	this.frame++;
 	var ws = (parseInt($('#mini').css('width')) - parseInt($('#pol').css('width')))/8;
     console.log(ws); 
@@ -65,21 +72,32 @@ bord: function(){
 	$('#miniscr'+t).css('border', "2px solid #FFFFFF"); 
 },
 start: function() {
+ $('#bat').animate({width: "0px"}, 0);
 	var go = setInterval(function() { 
 	slider.right();
+	slider.bat();
 	},3000);
     $("#stop").on('click', function(){
+    $('#bat').stop();
+    $('#bat').animate({width: "0px"}, 0);
     i=1;
     clearInterval(go);
+   
     });
 } 
 }
+
+
 /*-------------------------------------------READY-------------------------------------------------*/
+
+
 $(document).ready(function() {
    slider.init();
-      slider.about();
+   slider.about();
    slider.bord();
    slider.start();
+   slider.bat();
+
 
    var lr = setInterval(function() { 
       q=1;
@@ -87,6 +105,7 @@ $(document).ready(function() {
 
 $("#play").on('click', function(){
 	if (i==1) {
+			slider.bat();
 	slider.start();
 	i+=1;
 	}
@@ -109,6 +128,7 @@ $(".minsc").on('click', function(){
 	console.log(b);
 	$('#mini').animate({marginLeft: "-" + ((parseInt($('#mini').css('width')) - parseInt($('#pol').css('width')))/8)*b});
 	$('#big').animate({marginLeft: "-" + (parseInt($('#pol1').css('width'))*b)});
+	slider.about();
 	slider.frame = b;
 	slider.bord();
 });

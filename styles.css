@@ -37,22 +37,13 @@ height:280px;
 .about {
 
   width: 300px;
-  height: 40px;
+ min-height: 40px;
   background: rgba(255, 255, 255, 0.5);
   margin-left: 280px;
   margin-top: 220px;
   text-align: center;
-  line-height: 40px;
   color: #000000;
   font-size: 12px;
-}
-
-#sc5{
-
-	height: 60px;
-	background: rgba(255, 255, 255, 0.5);
-	padding: 0px;
-	line-height: 15px
 }
 
 #pol{
@@ -75,8 +66,8 @@ height:100px;
 	height: 100px;
 	background-color: white;
 	background-size:cover;
-  float: left;
-  margin-left: 2px;
+    float: left;
+    margin-left: 2px;
 }
 
 .minsc:hover{
@@ -84,15 +75,15 @@ height:100px;
 }
 
 #play{
-   position: fixed;
+   position: absolute;
    text-align: center;
-   line-height: 20px;
+   line-height: 15px;
    color: rgba(0,0,0, 0.5);
    font-family: sans-serif;
-   height: 20px;
+   height: 15px;
    width: 50px;
    background: rgba(255, 255, 255, 0.3);
-   margin: auto;
+   margin-left: 10px;
    float: left;
 }
 
@@ -100,17 +91,25 @@ height:100px;
    background: rgba(255, 255, 255, 0.7);
    cursor: pointer;
 }
+#bat{
+   position: absolute;
+   height: 10px;
+   background: rgba(255, 255, 255, 0.5);
+   margin-left: 10px;
+   margin-top: 280px
+}
+
 
 #stop{
-   position: fixed;
+   position: absolute;
    text-align: center;
-   line-height: 20px;
+   line-height: 15px;
    color: rgba(0,0,0, 0.5);
    font-family: sans-serif;
-   height: 20px;
+   height: 15px;
    width: 50px;
    background: rgba(255, 255, 255, 0.3);
-   margin-left: 50px;
+   margin-left: 60px;
    float: left;
 }
 
@@ -140,6 +139,14 @@ button {
 /*_____________________________________________atapt______________________________________________________________________-*/
 
 @media screen and (max-width: 767px){
+	#bat{
+   position: absolute;
+   height: 8px;
+   background: rgba(255, 255, 255, 0.5);
+   margin-left: 10px;
+   margin-top: 1400px
+}
+
   
   #main{
    width: 350px;
